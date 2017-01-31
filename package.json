@@ -1,0 +1,8 @@
+{
+	"main": "OnlyKey.html",
+	"name": "OnlyKey Configuration App",
+	"bg-script": "main.js",
+	"window": {
+		"fullscreen": true
+	}
+}
