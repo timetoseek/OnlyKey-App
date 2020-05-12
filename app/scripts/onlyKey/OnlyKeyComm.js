@@ -646,7 +646,7 @@ var OnlyKeyHID = function (onlyKeyConfigWizard) {
               const temparray = "1234";
               submitFirmwareData(temparray, function (err) { //First send one message to kick OnlyKey (in config mode) into bootloader
                 console.info('Firmware file sent to OnlyKey');
-                myOnlyKey.listen(handleMessage); //OnlyKey will respond with "SUCCESSFULL FW LOAD REQUEST, REBOOTING..." or "ERROR NOT IN CONFIG MODE, HOLD BUTTON 6 DOWN FOR 5 SEC"
+                myOnlyKey.listen(handleMessage); //OnlyKey will respond with "SUCCESSFULL FW LOAD REQUEST, REBOOTING..." or "ERROR NOT IN CONFIG MODE, HOLD BUTTON 6 DOWN FOR 5 SEC AND RELEASE. THE ONLYKEY LIGHT WILL TURN OFF. RE-ENTER YOUR PRIMARY PIN TO ENTER CONFIG MODE AND THE ONLYKEY LIGHT WILL FLASH RED."
               });
             } else {
               await loadFirmware();
@@ -1790,7 +1790,7 @@ var OnlyKeyHID = function (onlyKeyConfigWizard) {
                 ui.firmwareForm.reset();
                 ui.firmwareForm.setError('Firmware file sent to OnlyKey');
 
-                myOnlyKey.listen(handleMessage); //OnlyKey will respond with "SUCCESSFULL FW LOAD REQUEST, REBOOTING..." or "ERROR NOT IN CONFIG MODE, HOLD BUTTON 6 DOWN FOR 5 SEC"
+                myOnlyKey.listen(handleMessage); //OnlyKey will respond with "SUCCESSFULL FW LOAD REQUEST, REBOOTING..." or "ERROR NOT IN CONFIG MODE, HOLD BUTTON 6 DOWN FOR 5 SEC AND RELEASE. THE ONLYKEY LIGHT WILL TURN OFF. RE-ENTER YOUR PRIMARY PIN TO ENTER CONFIG MODE AND THE ONLYKEY LIGHT WILL FLASH RED."
               });
             } else {
               await loadFirmware();
@@ -1915,7 +1915,7 @@ var OnlyKeyHID = function (onlyKeyConfigWizard) {
                               await submitFirmwareData(temparray, function (err) { //First send one message to kick OnlyKey (in config mode) into bootloader
                                 console.info('Working...');
                                 console.info('Firmware file sent to OnlyKey');
-                                myOnlyKey.listen(handleMessage); //OnlyKey will respond with "SUCCESSFULL FW LOAD REQUEST, REBOOTING..." or "ERROR NOT IN CONFIG MODE, HOLD BUTTON 6 DOWN FOR 5 SEC"
+                                myOnlyKey.listen(handleMessage); //OnlyKey will respond with "SUCCESSFULL FW LOAD REQUEST, REBOOTING..." or "ERROR NOT IN CONFIG MODE, HOLD BUTTON 6 DOWN FOR 5 SEC AND RELEASE. THE ONLYKEY LIGHT WILL TURN OFF. RE-ENTER YOUR PRIMARY PIN TO ENTER CONFIG MODE AND THE ONLYKEY LIGHT WILL FLASH RED."
                               });
                               resolve();
                         } else {
